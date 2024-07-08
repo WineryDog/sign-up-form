@@ -4,9 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+NSW" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather" rel="stylesheet">
     <title>Sign-up Form</title>
+    <script defer src="script.js"></script>
 </head>
 <body>
-    
+    <div class="main-content">
+        <div class="left">
+            <div class="logo">
+                <img src="./mountain.svg" alt="a mountain logo" class="mountain-logo">
+                <div class="brand">
+                    <div class="brand-card">
+                        <p>Mountain Travels<p> 
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="right">
+            <div class="text-content">
+                <p>This is not a real online service! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, commodi!</p>
+                <p>Sign up <span class="hl-word"><em>now</em></span> to get started.</p>
+                <p>You <span class="hl-word"><em>know</em></span> you want to.</p>
+            </div>
+            <div class="form-section">
+                <p>Let's do this!</p>
+                <form id="sign-up" action="#" method="GET">
+                    <div class="form-row">
+                        <div class="input-card">
+                            <label for="fname">FIRST NAME:
+                                <span class="asterisk">*</span>
+                            </label>
+                            <input type="text" id="fname" name="fname" required autocomplete="off">
+                            <div id="fname-error" class="error"></div>
+                        </div>
+                        <div class="input-card">
+                            <label for="lname">LAST NAME:
+                                <span class="asterisk">*</span>
+                            </label>
+                            <input type="text" id="lname" name="lname" required autocomplete="off">
+                            <div id="lname-error" class="error"></div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-card">
+                            <label for="email">EMAIL:
+                                <span class="asterisk">*</span>
+                            </label>
+                            <input type="email" id="email" name="email" required autocomplete="off">
+                            <div id="email-error" class="error"></div>
+                        </div>
+                        <div class="input-card">
+                            <label for="phone">PHONE NUMBER:
+                                <span class="asterisk">*</span>
+                            </label>
+                            <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" autocomplete="off">
+                            <div id="phone-error" class="error"></div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-card">
+                            <label for="password">PASSWORD:
+                                <span class="asterisk">*</span>
+                            </label>
+                            <input type="password" id="password" name="password" required autocomplete="off" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" autocomplete="off">
+                            <div id="password-error" class="error"></div>
+                        </div>
+                        <div class="input-card">
+                            <label for="c-password">CONFIRM PASSWORD:
+                                <span class="asterisk">*</span>
+                            </label>
+                            <input type="password" id="c-password" name="c-password" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" autocomplete="off">
+                            <div id="c-password-error" class="error"></div>
+                        </div>
+                    </div>
+                    <div class="form-foot">
+                        <p>Fields marked with <span class="asterisk">*</span> are required.</p>
+                    </div>
+                </form>
+            </div>
+            <div class="submit-section">
+                <button type="submit" form="sign-up">Create Account</button>
+                <p>Already have an account? <a href=""> LOG IN</a></p>
+                <div class="img-credits">
+                    <p>Photo by <a href="https://unsplash.com/@8moments">Simon Berger</a> - Logo by <a href="https://www.vecteezy.com/members/bequeen">bequeen</a> - Coded by 
+                        <a class="attribution-link" href="https://github.com/WineryDog">
+                          WineryDog
+                        </a>
+                    </p>    
+                </div>    
+            </div>
+        </div>
+    </div>
 </body>
 </html>
