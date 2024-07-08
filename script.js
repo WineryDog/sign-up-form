@@ -20,18 +20,21 @@ function validateField(field) {
         if (input.value !== document.getElementById('password').value) {
             error.textContent = field.message;
             error.style.display = 'block';
+            input.classList.add('invalid');
         } else {
             error.textContent = '';
             error.style.display = 'none';
+            input.classList.remove('invalid');
         }
     } else {
         if (!field.pattern.test(input.value)) {
             error.textContent = field.message;
             error.style.display = 'block';
-
+            input.classList.add('invalid');
         } else {
             error.textContent = '';
             error.style.display = 'none';
+            input.classList.remove('invalid');
         }
     }
 }
@@ -71,6 +74,7 @@ function handleBlur(field) {
     input.addEventListener('blur', () => {
         if (input.value === '' || input.validity.patternMismatch) {
             error.style.display = 'none';
+            input.classList.remove('invalid');
         }
     });
 }
@@ -81,7 +85,6 @@ fields.forEach(field => {
     input.addEventListener('input', () => validateField(field));
     handleBlur(field);
 });
-
 
 const form = document.getElementById('sign-up');
 form.addEventListener('submit', function(event) {
@@ -94,9 +97,7 @@ form.addEventListener('submit', function(event) {
     });
     if (!isValid) {
         event.preventDefault();
-    }
-    else {
+    } else {
         alert("Thanks for subscribing!");
     }
-    
 });
