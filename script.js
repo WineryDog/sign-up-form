@@ -1,7 +1,4 @@
 const fields = [
-    { id: 'fname', errorId: 'fname-error', message: 'First name is required', pattern: /.+/ },
-    { id: 'lname', errorId: 'lname-error', message: 'Last name is required', pattern: /.+/ },
-    { id: 'email', errorId: 'email-error', message: 'Valid email is required', pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/ },
     { id: 'phone', errorId: 'phone-error', message: 'Please enter a 10 digit phone number', pattern: /^\d{10}$/ },
     { id: 'password', errorId: 'password-error', message: 'Invalid password', pattern: /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9\W]).{8,}$/ },
     { id: 'c-password', errorId: 'c-password-error', message: 'Passwords do not match', pattern: null }
